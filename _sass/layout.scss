@@ -10,6 +10,7 @@
     flex-wrap: nowrap;
     position: fixed;
     width: $nav-width-md;
+    float: left;
     height: 100%;
     flex-direction: column;
     border-right: $border $border-color;
@@ -17,7 +18,8 @@
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    // width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    width: $nav-width;
     min-width: $nav-width;
   }
 }
@@ -30,9 +32,10 @@
   }
 
   @include mq(lg) {
-    margin-left: calc(
-      (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-    );
+    // margin-left: calc(
+    //   (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
+    // );
+    margin-left: $nav-width + 50px;
   }
 }
 
